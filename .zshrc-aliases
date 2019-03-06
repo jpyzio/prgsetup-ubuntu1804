@@ -1,5 +1,3 @@
-#!/#!/usr/bin/zsh
-
 alias upd='sudo apt update && sudo apt full-upgrade && sudo apt autoremove && sudo apt autoclean && composer global update && yarn global upgrade'
 alias pogoda='curl wttr.in/Moon; curl http://wttr.in/krakow;'
 alias fuck='sudo $(history -p \!\!)'

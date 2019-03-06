@@ -1,5 +1,3 @@
-#!/usr/bin/zsh
-
 CURRENT_DIR=$(dirname "$0")
 
 [ -f ${CURRENT_DIR}/.env-config ] && source ${CURRENT_DIR}/.env-config
