@@ -1,0 +1,59 @@
+#!/usr/bin/zsh
+
+CURRENT_DIR=$(dirname "$0")
+
+alias dockerReboot='dockerDown && dockerUp'
+alias dockerRefresh='dockerDown && gitUpdateRepos && dockerUp && symfonyMigrationReset'
+
+
+dockerUp(){
+  CURRENT_DIR=$(pwd);
+  cd ${CODE_HOME}/auth-microservice; docker-compose up -d web;
+  cd ${CODE_HOME}/backend; docker-compose up -d web;
+  cd ${CODE_HOME}/common-environment; docker-compose up -d mariadb mailcatcher redis arangodb rabbitmq postgres;
+  cd ${CODE_HOME}/frontend; docker-compose up --build -d vue-http;
+  cd ${CODE_HOME}/hydra-data-manager; docker-compose up -d web;
+  cd ${CURRENT_DIR};
+}
+
+dockerDown(){
+  CURRENT_DIR=$(pwd);
+  cd ${CODE_HOME}/auth-microservice; docker-compose down;
+  cd ${CODE_HOME}/backend; docker-compose down;
+  cd ${CODE_HOME}/common-environment; docker-compose down;
+  cd ${CODE_HOME}/frontend; docker-compose down;
+  cd ${CODE_HOME}/hydra-data-manager; docker-compose down;
+  cd ${CURRENT_DIR};
+}
+
+symfonyMigrationUp(){
+  CURRENT_DIR=$(pwd);
+  cd ${CODE_HOME}/backend;
+  docker-compose exec -u 1000 web bin/console doctrine:migrations:migrate;
+  docker-compose exec -u 1000 -e APP_ENV=test web bin/console doctrine:migrations:migrate;
+  cd ${CURRENT_DIR};
+}
+
+symfonyMigrationReset(){
+  CURRENT_DIR=$(pwd);
+  chownJakub;
+  cd ${CODE_HOME}/backend;
+  docker-compose exec -u 1000 web bin/console doctrine:schema:drop --full-database --force;
+  docker-compose exec -u 1000 -e APP_ENV=test web bin/console doctrine:schema:drop --full-database --force;
+  symfonyMigrationUp;
+  cd ${CURRENT_DIR};
+}
+
+chownJakub(){
+  sudo chown jakub. ${CODE_HOME}/backend -Rf
+}
+
+gitUpdateRepos(){
+  CURRENT_DIR=$(pwd);
+  cd ${CODE_HOME}/auth-microservice; git pull;
+  cd ${CODE_HOME}/backend; git pull;
+  cd ${CODE_HOME}/common-environment; git pull;
+  cd ${CODE_HOME}/frontend; git pull;
+  cd ${CODE_HOME}/hydra-data-manager; git pull;
+  cd ${CURRENT_DIR};
+}
