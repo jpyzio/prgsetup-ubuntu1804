@@ -1,24 +1,19 @@
 #!/usr/bin/env bash
 
-echo "[Progress] Install Jetbrains Toolbox";
+set -e
 
 CURRENT_DIR=$(dirname "$0");
 
 URLDATA=`curl -s "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"`;
 
-LASTEST_URL=`printf %s "${URLDATA}" | jq '.TBA[0].downloads.linux.link'`;
-LASTEST_URL=${LASTEST_URL:gs/\"/};
+LASTEST_URL=`printf %s "${URLDATA}" | jq '.TBA[0].downloads.linux.link' | tr -d '"'`;
+LASTEST_BUILD=`printf %s "${URLDATA}" | jq '.TBA[0].build' | tr -d '"'`;
 
-LASTEST_BUILD=`printf %s "${URLDATA}" | jq '.TBA[0].build'`;
-LASTEST_BUILD=${LASTEST_BUILD:gs/\"/};
+wget -O ${CURRENT_DIR}/toolbox.tgz ${LASTEST_URL};
 
-wget -q -O toolbox.tgz ${LASTEST_URL};
+tar xzf ${CURRENT_DIR}/toolbox.tgz;
 
-tar xzf toolbox.tgz;
+jetbrains-toolbox-${LASTEST_BUILD}/jetbrains-toolbox;
 
-mv jetbrains-toolbox-${LASTEST_BUILD}/jetbrains-toolbox ${CURRENT_DIR}/../bin/;
-
-rm toolbox.tgz;
-rmdir jetbrains-toolbox-${LASTEST_BUILD};
-
-${CURRENT_DIR}/../bin/toolbox;
+rm ${CURRENT_DIR}/toolbox.tgz;
+rm -Rf jetbrains-toolbox-${LASTEST_BUILD}

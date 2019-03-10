@@ -53,5 +53,6 @@ gitUpdateRepos(){
   cd ${CODE_HOME}/common-environment; git pull;
   cd ${CODE_HOME}/frontend; git pull;
   cd ${CODE_HOME}/hydra-data-manager; git pull;
+  cd ${CODE_HOME}/hydra; git pull;
   cd ${CURRENT_DIR};
 }
