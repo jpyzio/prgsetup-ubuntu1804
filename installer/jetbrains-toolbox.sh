@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+progress "Jetbrains toolbar";
 
 CURRENT_DIR=$(dirname "$0");
 
@@ -13,7 +13,10 @@ wget -O ${CURRENT_DIR}/toolbox.tgz ${LASTEST_URL};
 
 tar xzf ${CURRENT_DIR}/toolbox.tgz;
 
+
 jetbrains-toolbox-${LASTEST_BUILD}/jetbrains-toolbox;
 
+message "Accept license and close Toolbox window";
+
 rm ${CURRENT_DIR}/toolbox.tgz;
-rm -Rf jetbrains-toolbox-${LASTEST_BUILD}
+rm -Rf jetbrains-toolbox-${LASTEST_BUILD};

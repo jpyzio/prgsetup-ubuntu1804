@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-set -e
+CURRENT_DIR=$(dirname "$0");
 
-CHROME_FILE='google-chrome.deb';
+CHROME_FILE_PATH="${CURRENT_DIR}/google-chrome.deb";
 
-wget -O ${CHROME_FILE} https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb;
+wget -O ${CHROME_FILE_PATH} https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb;
 
-sudo gdebi -n ${CHROME_FILE};
+sudo gdebi -n ${CHROME_FILE_PATH};
 
-rm ${CHROME_FILE};
+rm ${CHROME_FILE_PATH};

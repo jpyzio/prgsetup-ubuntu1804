@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-set -e
+progress "Slack";
 
-SLACK_FILE='slack.deb';
+CURRENT_DIR=$(dirname "$0");
+
+SLACK_FILE="${CURRENT_DIR}/slack.deb";
 
 wget -O ${SLACK_FILE} https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.7-amd64.deb;
 
