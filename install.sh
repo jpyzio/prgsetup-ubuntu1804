@@ -2,6 +2,9 @@
 
 set -e
 
+INSTALLER_VERSION="18.04"
+
+UBUNTU_VERSION=`lsb_release -r -s`
 ROOT_DIR=$(dirname "$0")
 INSTALLER_DIR="${ROOT_DIR}/installer"
 
@@ -16,6 +19,11 @@ message(){
 input(){
     zenity --entry --title="Ubuntu Configurator" --text="${1}"
 }
+
+if [[ "${UBUNTU_VERSION}" != "${INSTALLER_VERSION}" ]] ; then
+    message "ERROR: This installer is only for Ubuntu "
+    exit 1;
+fi
 
 CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     20 55 15 \
