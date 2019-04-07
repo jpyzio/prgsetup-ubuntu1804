@@ -4,7 +4,7 @@ progress "SSH Key"
 
 SSH_DIR=${HOME}/.ssh/
 PRIVATE_KEY_PATH=${SSH_DIR}id_rsa
-PUBLIC_KEY=`cat ${SSH_DIR}id_rsa.pub`
+PUBLIC_KEY_PATH=${SSH_DIR}id_rsa.pub
 
 if [[ -f ${PRIVATE_KEY_PATH} ]]; then
     zenity --info --title="SSH" --text="Your RSA key is already generated. Remove it if you want to generate new key." --width=200 --height=50
@@ -15,4 +15,7 @@ else
     ssh-keygen -q -t rsa -N "${PASSPHRASE}" -o -a 100 -b 4096 -f "${SSH_DIR}id_rsa"
 fi
 
-zenity --entry --title="SSH" --text="This is your Public key, paste it into Git repositories" --entry-text="${PUBLIC_KEY}"
+if [[ -f ${PUBLIC_KEY_PATH} ]]; then
+    PUBLIC_KEY=`cat ${PUBLIC_KEY_PATH}`
+    zenity --entry --title="SSH" --text="This is your Public key, paste it into Git repositories" --entry-text="${PUBLIC_KEY}"
+fi
