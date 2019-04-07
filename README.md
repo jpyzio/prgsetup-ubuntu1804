@@ -7,7 +7,6 @@ Ubuntu configurator for programming purposes.
 Download configurator
 ```
 git clone --single-branch --branch ubuntu/18.04 --depth=1 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
-cd ubuntu-configurator;
 ```
 
 Execute installer
