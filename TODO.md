@@ -1,0 +1,2 @@
+ - Generowanie kluczy GPG
+ - Instrukcja instalacji dla konkretnych wersji Ubuntu - master trochę słabo
