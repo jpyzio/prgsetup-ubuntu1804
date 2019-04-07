@@ -4,12 +4,14 @@ protected_branch='master'
 current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
 if [ $protected_branch = $current_branch ]; then
-    read -p "You're about to push master, is that what you intended? [y|N] " -n 1 -r < /dev/tty
-    echo
-    if echo $REPLY | grep -E '^[Yy]$' > /dev/null; then
-        exit 0 # push will execute
-    fi
-    exit 1 # push will not execute
+    exec < /dev/tty
+        while true; do
+            read -p "You're about to commit to master, want some bacon? [y|n]" yn
+            case $yn in
+                [Yy]* ) exit 0;; # tells git to continue normally
+                [Nn]* ) exit 1;; # tells git to abort operation
+            esac
+        done
 else
     exit 0 # push will execute
 fi
