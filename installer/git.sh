@@ -17,5 +17,6 @@ if [[ ! -z "${GPG_ID}" ]]; then
     git config --global user.signingkey ${GPG_ID}
 fi
 
-echo ".idea/" >> ~/.gitignore_global
+echo -e "npm-debug.log\n.DS_Store\nThumbs.db\n.idea/\n*~\n*.log" | tee -a ~/.gitignore_global
+
 git config --global core.excludesfile ~/.gitignore_global
