@@ -11,7 +11,10 @@ sudo apt install -y git
 ### Installing
 Download configurator
 ```
-git clone --depth=1 https://github.com/jpyzio/ubuntu-configurator.git ~/.ubuntu-configurator
+wget -O ubuntu-configurator.zip https://github.com/jpyzio/ubuntu-configurator/archive/master.zip
+unzip ubuntu-configurator.zip
+rm ubuntu-configurator.zip
+mv ubuntu-configurator-master .ubuntu-configurator
 ```
 
 Execute installer
