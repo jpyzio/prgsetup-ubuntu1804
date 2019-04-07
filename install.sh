@@ -29,6 +29,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "slack" "Slack communicator" on \
     "office" "Office apps" on \
     "ufw" "Enable firewall" on \
+    "vpn-client" "VPN Client" on \
     "php" "PHP 7.2 with extensions" off  \
     "yarn" "Node.js + Yarn" off \
     "spotify" "Spotify" off \
