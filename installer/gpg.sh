@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-CURRENT_DIR=$(dirname "$0")
+sudo apt install -y gpa gpg
 
-sudo apt install -y gpa
-#GPG_ID=`gpg --list-secret-keys --with-colons 2> /dev/null | grep '^sec:' | cut --delimiter ':' --fields 5`
-#echo "export GPGKEY=${GPG_ID}" >> ${CURRENT_DIR}/../.env-config
+# TODO: generate safe gpg
+#gpg --gen-key
+
+GPG_ID=`gpg --list-secret-keys --with-colons 2> /dev/null | grep '^sec:' | cut --delimiter ':' --fields 5`
+if [[ ! -z "${GPG_ID}" ]]; then
+    echo "export GPGKEY=${GPG_ID}" >> ~/.bashrc
+    echo "export GPGKEY=${GPG_ID}" >> ~/.zshrc
+fi

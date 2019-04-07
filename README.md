@@ -1,12 +1,7 @@
 # Ubuntu Configurator
 Ubuntu configurator for programming purposes.
 
-### Prerequisites
-
-```
-sudo apt update
-sudo apt install -y git
-```
+# WARNING!!! master branch is not stable yet :(
 
 ### Installing
 Download configurator
@@ -21,6 +16,7 @@ Execute installer
 ```
 bash ~/.ubuntu-configurator/install.sh
 ```
+
 ## Contributing
 Please read [CONTRIBUTING.md](https://github.com/jpyzio/ubuntu-configurator/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
@@ -29,8 +25,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 Tags: \
 v1.\*.\* - Ubuntu 18.04 LTS \
-v2.\*.\* - Ubuntu 20.04 LTS \
-v3.\*.\* - Ubuntu 22.04 LTS
+v2.\*.\* - Ubuntu 20.04 LTS (in the future)\
+v3.\*.\* - Ubuntu 22.04 LTS (in the future)
 
 ## Authors
 * **Jakub Pyzio** - *Initial work* - [jpyzio](https://github.com/jpyzio)
