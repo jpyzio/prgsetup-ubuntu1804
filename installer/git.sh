@@ -15,6 +15,7 @@ fi
 GPG_ID=`gpg --list-secret-keys --with-colons 2> /dev/null | grep '^sec:' | cut --delimiter ':' --fields 5`
 if [[ ! -z "${GPG_ID}" ]]; then
     git config --global user.signingkey ${GPG_ID}
+    git config --global commit.gpgsign true
 fi
 
 echo -e "npm-debug.log\n.DS_Store\nThumbs.db\n.idea/\n*~\n*.log" | tee -a ~/.gitignore_global
