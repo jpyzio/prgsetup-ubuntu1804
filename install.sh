@@ -23,6 +23,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "diagnostic" "Diagnostic tools" on \
     "google-chrome" "Google Chrome" on \
     "git" "Git" on \
+    "git-hooks" "Hooks for Git" off \
     "jetbrains-toolbox" "Jetbrains Toolbox" on \
     "docker" "Docker & Docker Compose" on  \
     "ssh-keygen" "Generate RSA key" on \
