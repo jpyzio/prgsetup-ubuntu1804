@@ -1,13 +1,12 @@
-alias upd='sudo apt update && sudo apt full-upgrade && composer global update && yarn global upgrade';
-alias weather='curl http://wttr.in/krakow';
-alias fuck='sudo $(history -p \!\!)';
-alias wanip='dig +short myip.opendns.com @resolver1.opendns.com';
+alias upd='sudo apt update && sudo apt full-upgrade'
+alias fuck='sudo $(history -p \!\!)'
+alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 confirm() {
     while true; do
         echo -e "\n\e[32m"
-        read -r -p "${1:-Are you sure? [y]es/[n]o} " RESPONSE;
-        echo -e "\e[39m";
+        read -r -p "${1:-Are you sure? [y]es/[n]o} " RESPONSE
+        echo -e "\e[39m"
         case ${RESPONSE} in
         [yY][eE][sS]|[yY])
             return 0;

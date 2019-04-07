@@ -2,4 +2,4 @@
 
 progress "SSH Server"
 
-sudo apt install -y openssh-server;
+sudo apt install -y openssh-server

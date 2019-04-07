@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-set -e;
+set -e
 
-CURRENT_DIR=$(dirname "$0");
-INSTALLER_DIR="${CURRENT_DIR}/installer";
+CURRENT_DIR=$(dirname "$0")
+INSTALLER_DIR="${CURRENT_DIR}/installer"
 
 progress(){
-    notify-send "Installation progress: ${1}";
+    notify-send "Installation progress: ${1}"
 }
 
 message(){
@@ -27,13 +27,13 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "ssh-server" "Open SSH Server" off \
     "gpg" "GPG Key" off \
     "java8" "Java 8" off \
-    3>&2 2>&1 1>&3 );
+    3>&2 2>&1 1>&3 )
 
-source ${INSTALLER_DIR}/misc.sh;
+source ${INSTALLER_DIR}/misc.sh
 
 for CHOICE in ${CHOICES}; do
-    source "${INSTALLER_DIR}/`echo ${CHOICE} | tr -d '"'`.sh";
-done;
+    source "${INSTALLER_DIR}/`echo ${CHOICE} | tr -d '"'`.sh"
+done
 
-message "Press [OK] to reboot system";
-reboot;
+message "Press [OK] to reboot system"
+reboot

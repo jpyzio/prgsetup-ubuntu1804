@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-progress "UFW";
+progress "UFW"
 
-sudo apt install -y ufw;
+sudo apt install -y ufw
 
-sudo ufw enable;
+sudo ufw enable
