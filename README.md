@@ -6,16 +6,13 @@ Ubuntu configurator for programming purposes.
 ### Installing
 Download configurator
 ```
-cd ~
-wget -O ~/ubuntu-configurator.zip https://github.com/jpyzio/ubuntu-configurator/archive/master.zip
-unzip ~/ubuntu-configurator.zip
-rm ~/ubuntu-configurator.zip
-mv ~/ubuntu-configurator-master ~/.ubuntu-configurator
+git clone --single-branch --branch ubuntu/18.04 --depth=1 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
+cd ubuntu-configurator;
 ```
 
 Execute installer
 ```
-bash ~/.ubuntu-configurator/install.sh
+bash ~/ubuntu-configurator/install.sh
 ```
 
 ## Contributing
@@ -24,10 +21,17 @@ Please read [CONTRIBUTING.md](https://github.com/jpyzio/ubuntu-configurator/blob
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/jpyzio/ubuntu-configurator/tags). 
 
-Tags: \
-v1.\*.\* - Ubuntu 18.04 LTS \
-v2.\*.\* - Ubuntu 20.04 LTS (in the future)\
-v3.\*.\* - Ubuntu 22.04 LTS (in the future)
+master - latest LTS
+
+Branches:
+ - ubuntu/18.04
+ - ubuntu/20.04 (in the future)
+ - ubuntu/22.04 (in the future)
+
+Tags:
+ - v1.\*.\* - Ubuntu 18.04 LTS
+ - v2.\*.\* - Ubuntu 20.04 LTS (in the future)
+ - v3.\*.\* - Ubuntu 22.04 LTS (in the future)
 
 ## Authors
 * **Jakub Pyzio** - *Initial work* - [jpyzio](https://github.com/jpyzio)
