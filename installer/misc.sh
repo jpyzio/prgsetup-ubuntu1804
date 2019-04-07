@@ -4,4 +4,4 @@ sudo apt update
 
 sudo apt full-upgrade -y
 
-sudo apt install -y gdebi net-tools curl wget jq xclip zenity
+sudo apt install -y gdebi net-tools curl wget jq xclip zenity etckeeper

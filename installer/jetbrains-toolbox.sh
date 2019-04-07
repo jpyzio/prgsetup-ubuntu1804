@@ -16,7 +16,5 @@ tar xzf ${TOOLBOX_FILE}
 
 jetbrains-toolbox-${LASTEST_BUILD}/jetbrains-toolbox
 
-message "Accept license and close Toolbox window"
-
 rm ${TOOLBOX_FILE}
 rm -Rf jetbrains-toolbox-${LASTEST_BUILD}

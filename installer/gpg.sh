@@ -2,7 +2,7 @@
 
 sudo apt install -y gpa gpg
 
-# TODO: generate safe gpg
+# TODO: generate safe gpg key
 #gpg --gen-key
 
 GPG_ID=`gpg --list-secret-keys --with-colons 2> /dev/null | grep '^sec:' | cut --delimiter ':' --fields 5`

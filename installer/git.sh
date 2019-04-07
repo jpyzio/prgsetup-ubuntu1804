@@ -13,7 +13,6 @@ if [[ ! -z "${GIT_EMAIL}" ]]; then
 fi
 
 GPG_ID=`gpg --list-secret-keys --with-colons 2> /dev/null | grep '^sec:' | cut --delimiter ':' --fields 5`
-
 if [[ ! -z "${GPG_ID}" ]]; then
     git config --global user.signingkey ${GPG_ID}
 fi
