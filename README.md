@@ -6,10 +6,11 @@ Ubuntu configurator for programming purposes.
 ### Installing
 Download configurator
 ```
-wget -O ubuntu-configurator.zip https://github.com/jpyzio/ubuntu-configurator/archive/master.zip
-unzip ubuntu-configurator.zip
-rm ubuntu-configurator.zip
-mv ubuntu-configurator-master .ubuntu-configurator
+cd ~
+wget -O ~/ubuntu-configurator.zip https://github.com/jpyzio/ubuntu-configurator/archive/master.zip
+unzip ~/ubuntu-configurator.zip
+rm ~/ubuntu-configurator.zip
+mv ~/ubuntu-configurator-master ~/.ubuntu-configurator
 ```
 
 Execute installer
