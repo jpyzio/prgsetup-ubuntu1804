@@ -1,0 +1,13 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE=$1
+SEVEN_DIRTY_WORDS='shit|piss|fuck|cunt|cocksucker|motherfucker|tits|kurwa|pierdol' # http://en.wikipedia.org/wiki/Seven_dirty_words
+
+# people who didn't use this hook -> http://www.commitlogsfromlastnight.com/
+
+if grep -qE $seven_dirty_words COMMIT_MSG_FILE; then
+  echo "Okay, you really need to chill out"
+  exit 1 # tells git you will try again later
+fi
+
+exit 0 # life is beautiful
