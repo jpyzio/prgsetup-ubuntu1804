@@ -19,6 +19,7 @@ input(){
 
 CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     20 55 15 \
+    "zsh" "Z Shell" off \
     "diagnostic" "Diagnostic tools" on \
     "google-chrome" "Google Chrome" on \
     "git" "Git" on \
@@ -34,7 +35,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "ssh-server" "Open SSH Server" off \
     "gpg" "GPG Key" off \
     "java8" "Java 8" off \
-    "zsh" "Z Shell" off \
+    "atom" "Atom editor" off \
     3>&2 2>&1 1>&3 )
 
 source ${INSTALLER_DIR}/misc.sh
