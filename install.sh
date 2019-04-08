@@ -5,7 +5,7 @@ set -e
 INSTALLER_VERSION="18.04"
 
 UBUNTU_VERSION=`lsb_release -r -s`
-ROOT_DIR=$(dirname "$0")
+ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 INSTALLER_DIR="${ROOT_DIR}/installer"
 
 progress(){
