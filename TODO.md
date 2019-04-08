@@ -1,3 +1,3 @@
  - Generowanie kluczy GPG
- - Instrukcja instalacji dla konkretnych wersji Ubuntu - master trochę słabo
  - ścieżka do pliku kończy się _PATH, a do katalogu _DIR
+ - wszystkie ścieżki kończą się bez "/"
