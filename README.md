@@ -3,11 +3,16 @@ Ubuntu configurator for programming purposes.
 
 # WARNING!!! master branch is not stable yet :(
 
+### Prerequisites
+```
+sudo apt update
+sudo apt install -y git
+```
+
 ### Installing
 Download configurator
 ```
-sudo apt update && sudo apt install -y git
-git clone --single-branch --branch ubuntu/18.04 --depth=1 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
+git clone --single-branch --branch ubuntu/{!!!UBUNTU_VERSION!!!} --depth=1 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
 ```
 
 Execute installer
