@@ -40,7 +40,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "ufw" "Enable firewall" on \
     "vpn-client" "VPN Client" on \
     "php" "PHP 7.2 with extensions" off  \
-    "yarn" "Node.js + Yarn" off \
+    "frontend-tools" "Node.js + Yarn + Vue" off \
     "spotify" "Spotify" off \
     "ssh-server" "Open SSH Server" off \
     "gpg" "GPG Key" off \
