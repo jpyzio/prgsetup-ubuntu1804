@@ -11,3 +11,6 @@ sudo apt update
 sudo apt install -y yarn
 
 yarn global add @vue/cli
+
+echo "export PATH=\"\$PATH:$(yarn global bin)\"" >> ~/.zshrc
+echo "export PATH=\"\$PATH:$(yarn global bin)\"" >> ~/.bashrc
