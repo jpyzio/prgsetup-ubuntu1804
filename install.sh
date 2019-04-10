@@ -47,6 +47,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "java8" "Java 8" off \
     "atom" "Atom editor" off \
     "virtualbox" "VirtualBox" off \
+    "rest-tools" "REST Tools" off \
     3>&2 2>&1 1>&3 )
 
 source ${INSTALLER_DIR}/misc.sh
