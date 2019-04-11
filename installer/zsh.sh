@@ -9,3 +9,8 @@ sh -c "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-m
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+echo "
+bindkey \"^[[1;3C\" forward-word
+bindkey \"^[[1;3D\" backward-word
+" | tee -a ~/.zshrc
