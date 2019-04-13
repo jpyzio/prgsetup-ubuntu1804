@@ -18,3 +18,6 @@ jetbrains-toolbox-${LASTEST_BUILD}/jetbrains-toolbox
 
 rm ${TOOLBOX_FILE}
 rm -Rf jetbrains-toolbox-${LASTEST_BUILD}
+
+echo "fs.inotify.max_user_watches = 524288" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p --system
