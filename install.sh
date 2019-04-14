@@ -48,6 +48,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "atom" "Atom editor" off \
     "virtualbox" "VirtualBox" off \
     "rest-tools" "REST Tools" off \
+    "sublime3" "Sublime Text 3" off \
     3>&2 2>&1 1>&3 )
 
 source ${INSTALLER_DIR}/misc.sh
