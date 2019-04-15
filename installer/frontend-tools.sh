@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-progress "Yarn"
+progress "Front-end Tools"
 
 curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
 sudo apt install -y nodejs

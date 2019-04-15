@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-progress "Jetbrains toolbar"
+progress "Jetbrains toolbox"
 
 URLDATA=`curl -s "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"`
 

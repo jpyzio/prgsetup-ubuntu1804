@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-progress "PHP"
+progress "PHP 7.2 + Composer"
 
 sudo apt install -y php7.2-gd php7.2-intl php7.2-mysql php7.2-phpdbg php7.2-snmp php7.2-tidy php7.2-zip php7.2 \
 php7.2-cli php7.2-dev php7.2-gmp php7.2-json php7.2-odbc php7.2-pspell php7.2-soap php7.2-xml php7.2-bcmath \

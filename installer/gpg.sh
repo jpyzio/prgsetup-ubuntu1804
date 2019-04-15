@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+progress "GPG"
+
 sudo apt install -y gpa gpg
 
 while [[ -z ${GPG_REAL_NAME} ]] ; do
