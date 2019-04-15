@@ -4,26 +4,22 @@ set -e
 
 INSTALLER_VERSION="18.04"
 
-UBUNTU_VERSION=`lsb_release -r -s`
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 INSTALLER_DIR="${ROOT_DIR}/installer"
 
-progress(){
+progress() {
     notify-send "Installation progress: ${1}"
 }
 
-message(){
+message() {
     zenity --text "${1}" --info --width=200 --height=50 > /dev/null 2>&1
 }
 
-input(){
+input() {
     zenity --entry --title="Ubuntu Configurator" --text="${1}"
 }
 
-if [[ "${UBUNTU_VERSION}" != "${INSTALLER_VERSION}" ]] ; then
-    message "ERROR: This installer is only for Ubuntu "
-    exit 1;
-fi
+source ${INSTALLER_DIR}/check.sh
 
 CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     20 55 15 \
