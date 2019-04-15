@@ -2,7 +2,7 @@
 
 progress "Git"
 
-sudo apt install -y git gitk gitstats meld
+sudo apt install -y git gitk meld
 
 
 while [[ -z ${GIT_USER_NAME} ]] ; do
