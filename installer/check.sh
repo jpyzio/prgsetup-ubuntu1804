@@ -7,9 +7,8 @@ if [[ "${UBUNTU_VERSION}" != "${INSTALLER_VERSION}" ]] ; then
     exit 1;
 fi
 
-for DIR in .ssh .gnupg; do
-    if [[ ! -d ~/${DIR} ]]; then
-        message "Missing $ {DIR}: if you have generated, put them in your home directory, otherwise ignore.";
+for DIR in ~/.ssh ~/.gnupg; do
+    if [[ ! -d ${DIR} ]]; then
+        message "Missing ${DIR}: if you have generated, put them in your home directory, otherwise ignore.";
     fi
-
 done
