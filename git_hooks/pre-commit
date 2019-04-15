@@ -2,11 +2,11 @@
 
 MASTER='refs/heads/master'
 
-if git symbolic-ref HEAD | grep $MASTER >/dev/null; then
+if git symbolic-ref HEAD | grep ${MASTER} >/dev/null; then
     exec < /dev/tty
     while true; do
-        read -p "You're about to commit to master, want some bacon? [y|n]" yn
-        case $yn in
+        read -p "You're about to commit to master, want some bacon? [y|n]" ANSWER
+        case ${ANSWER} in
             [Yy]* ) exit 0;; # tells git to continue normally
             [Nn]* ) exit 1;; # tells git to abort operation
         esac

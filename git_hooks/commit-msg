@@ -5,7 +5,7 @@ SEVEN_DIRTY_WORDS='shit|piss|fuck|cunt|cocksucker|motherfucker|tits|kurwa|pierdo
 
 # people who didn't use this hook -> http://www.commitlogsfromlastnight.com/
 
-if grep -qE $seven_dirty_words COMMIT_MSG_FILE; then
+if grep -qE ${SEVEN_DIRTY_WORDS} COMMIT_MSG_FILE; then
   echo "Okay, you really need to chill out"
   exit 1 # tells git you will try again later
 fi
