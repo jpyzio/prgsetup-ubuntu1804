@@ -40,7 +40,6 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "spotify" "Spotify" off \
     "ssh-server" "Open SSH Server" off \
     "gpg" "GPG Key" off \
-    "java8" "Java 8" off \
     "atom" "Atom editor" off \
     "virtualbox" "VirtualBox" off \
     "rest-tools" "REST Tools" off \
