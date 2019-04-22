@@ -8,15 +8,13 @@ ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 INSTALLER_DIR="${ROOT_DIR}/installer"
 CONFIG_FILE="${ROOT_DIR}/config.sh"
 
-message() {
-    zenity --text "${1}" --info --width=200 --height=50 > /dev/null 2>&1
-}
-
 input() {
     zenity --entry --title="Ubuntu Configurator" --text="${1}"
 }
 
 source ${INSTALLER_DIR}/check.sh
+
+sudo echo "\e[32mLet's start the installation ;)\e[39m";
 
 CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     20 55 15 \

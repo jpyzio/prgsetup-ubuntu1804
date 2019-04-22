@@ -2,9 +2,10 @@
 
 sudo apt install -y zsh gawk
 
-message "After the installation of the oh-my-zsh, the ZSH terminal will appear. Press [CTRL]+D to continue installing the next packages"
-sh -c "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-#TODO: manual installation
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.zshrc ~/.zshrc.orig
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+sudo chsh -s /bin/zsh
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install

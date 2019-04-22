@@ -26,4 +26,4 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
-message "[INFO] Reboot system before run any docker command!"
+echo "\e[31mWARNING!!! Before using the docker commands, restart the system!\e[39m"
