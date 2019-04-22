@@ -6,6 +6,7 @@ INSTALLER_VERSION="18.04"
 
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 INSTALLER_DIR="${ROOT_DIR}/installer"
+CONFIG_FILE="${ROOT_DIR}/config.sh"
 
 message() {
     zenity --text "${1}" --info --width=200 --height=50 > /dev/null 2>&1
@@ -19,11 +20,12 @@ source ${INSTALLER_DIR}/check.sh
 
 CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     20 55 15 \
-    "zsh" "Z Shell" off \
     "diagnostic" "Diagnostic tools" on \
+    "zsh" "Z Shell" off \
     "google-chrome" "Google Chrome" on \
+    "gpg" "GPG Key" off \
     "git" "Git" on \
-    "git-hooks" "Hooks for Git" off \
+    "git-hooks" "Hooks for Git" on \
     "jetbrains-toolbox" "Jetbrains Toolbox" on \
     "docker" "Docker & Docker Compose" on  \
     "ssh-keygen" "Generate RSA key" on \
@@ -35,12 +37,15 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "frontend-tools" "Node.js + Yarn + Vue" off \
     "spotify" "Spotify" off \
     "ssh-server" "Open SSH Server" off \
-    "gpg" "GPG Key" off \
     "atom" "Atom editor" off \
     "virtualbox" "VirtualBox" off \
     "rest-tools" "REST Tools" off \
     "sublime3" "Sublime Text 3" off \
     3>&2 2>&1 1>&3 )
+
+if [[ -f ${CONFIG_FILE} ]]; then
+    source ${CONFIG_FILE}
+fi
 
 source ${INSTALLER_DIR}/misc.sh
 
@@ -48,5 +53,12 @@ for CHOICE in ${CHOICES}; do
     source "${INSTALLER_DIR}/`echo ${CHOICE} | tr -d '"'`.sh"
 done
 
-message "Press [OK] to reboot system"
-reboot
+if [[ -f ${CONFIG_FILE} ]]; then
+    if zenity --question --text="Do you want safely remove your configuration?"; then
+        shred --remove --iterations=100 ${CONFIG_FILE}
+    fi
+fi
+
+if zenity --question --text="Do you want to reboot your system?"; then
+    reboot
+fi
