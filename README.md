@@ -18,7 +18,7 @@ git clone --single-branch --branch ubuntu/{!!!UBUNTU_VERSION!!!} --depth=1 https
 Optional configuration for non-interactive installation (after installation it will be safely removed)
 ```bash
 cp config.sh.dist config.sh
-vim config.sh # and set variables
+vi config.sh # and set variables
 ```
 
 Execute installer
