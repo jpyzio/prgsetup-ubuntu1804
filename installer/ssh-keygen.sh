@@ -15,5 +15,5 @@ fi
 
 if [[ -f ${PUBLIC_KEY_PATH} ]]; then
     PUBLIC_KEY=`cat ${PUBLIC_KEY_PATH}`
-    zenity --entry --title="SSH" --text="This is your Public key, paste it into Git repositories" --entry-text="${PUBLIC_KEY}"
+    zenity --entry --title="SSH" --text="This is your Public key, paste it into Git repositories" --entry-text="${PUBLIC_KEY}" || true
 fi
