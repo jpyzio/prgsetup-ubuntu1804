@@ -7,10 +7,6 @@ INSTALLER_VERSION="18.04"
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 INSTALLER_DIR="${ROOT_DIR}/installer"
 
-progress() {
-    notify-send "Installation progress: ${1}"
-}
-
 message() {
     zenity --text "${1}" --info --width=200 --height=50 > /dev/null 2>&1
 }

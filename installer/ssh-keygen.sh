@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-progress "SSH Key Generator"
-
 SSH_DIR=${HOME}/.ssh/
 PRIVATE_KEY_PATH=${SSH_DIR}id_rsa
 PUBLIC_KEY_PATH=${SSH_DIR}id_rsa.pub

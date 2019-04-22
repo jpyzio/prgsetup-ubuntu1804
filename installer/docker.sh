@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-progress "Docker"
-
 sudo apt purge -y docker docker-engine docker.io containerd runc
 
 sudo apt update

@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-progress "Git"
-
 sudo apt install -y git gitk meld
 
 

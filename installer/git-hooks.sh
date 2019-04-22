@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-progress "Git hooks"
-
 HOOKS_DIR="${ROOT_DIR}/git_hooks/"
 USER_GIT_TEMPLATES_DIR="${HOME}/.git-templates/"
 USER_GIT_HOOKS_DIR=${USER_GIT_TEMPLATES_DIR}hooks/

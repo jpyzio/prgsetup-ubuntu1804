@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-progress "Jetbrains toolbox"
-
 URLDATA=`curl -s "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"`
 
 LASTEST_URL=`printf %s "${URLDATA}" | jq '.TBA[0].downloads.linux.link' | tr -d '"'`
