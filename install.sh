@@ -14,7 +14,7 @@ input() {
 
 source ${INSTALLER_DIR}/check.sh
 
-sudo echo "\e[32mLet's start the installation ;)\e[39m";
+sudo echo -e "\e[32mLet's start the installation ;)\e[39m";
 
 CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     20 55 15 \
