@@ -5,17 +5,17 @@ set -o pipefail
 set -o nounset
 # set -o xtrace
 
-INSTALLER_VERSION="18.04"
+CONFIGURATOR_VERSION="18.04"
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-INSTALLER_DIR="${ROOT_DIR}/installer"
+MODULES_DIR="${ROOT_DIR}/modules"
 CONFIG_FILE="${ROOT_DIR}/config.sh"
 
 input() {
     zenity --entry --title="Ubuntu Configurator" --text="${1}"
 }
 
-source ${INSTALLER_DIR}/check.sh
+source ${MODULES_DIR}/check.sh
 
 sudo echo -e "\e[32mLet's start the installation ;)\e[39m";
 
@@ -48,10 +48,10 @@ if [[ -f ${CONFIG_FILE} ]]; then
     source ${CONFIG_FILE}
 fi
 
-source ${INSTALLER_DIR}/misc.sh
+source ${MODULES_DIR}/misc.sh
 
 for CHOICE in ${CHOICES}; do
-    source "${INSTALLER_DIR}/`echo ${CHOICE} | tr -d '"'`.sh"
+    source "${MODULES_DIR}/`echo ${CHOICE} | tr -d '"'`.sh"
 done
 
 if [[ -f ${CONFIG_FILE} ]]; then

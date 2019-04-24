@@ -21,7 +21,7 @@ cp config.sh.dist config.sh
 vi config.sh # and set variables
 ```
 
-Execute installer
+Execute configurator
 ```bash
 bash ~/ubuntu-configurator/install.sh
 ```

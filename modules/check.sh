@@ -2,8 +2,8 @@
 
 UBUNTU_VERSION=`lsb_release -r -s`
 
-if [[ "${UBUNTU_VERSION}" != "${INSTALLER_VERSION}" ]] ; then
-    echo -e "\e[31mERROR: This installer is only for Ubuntu ${INSTALLER_VERSION}\e[39m"
+if [[ "${UBUNTU_VERSION}" != "${CONFIGURATOR_VERSION}" ]] ; then
+    echo -e "\e[31mERROR: This configurator is only for Ubuntu ${CONFIGURATOR_VERSION}\e[39m"
     exit 1;
 fi
 
