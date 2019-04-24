@@ -3,7 +3,6 @@
 sudo apt install -y zsh gawk
 
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-cp ~/.zshrc ~/.zshrc.orig
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sudo chsh -s /bin/zsh
 
