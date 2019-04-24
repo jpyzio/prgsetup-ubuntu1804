@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+KEYGEN_CONFIG_FILE="${ROOT_DIR}/keygen_config"
+
 sudo apt install -y gpa gpg
 
 while [[ -z ${GPG_REAL_NAME} ]] ; do
@@ -22,11 +24,11 @@ Name-Real: ${GPG_REAL_NAME}
 Name-Email: ${GPG_EMAIL}
 Expire-Date: 0
 Passphrase: ${GPG_PASSPHRASE}
-" > genkey
+" > ${KEYGEN_CONFIG_FILE}
 
-gpg --gen-key --batch genkey
+gpg --gen-key --batch ${KEYGEN_CONFIG_FILE}
 
-shred --remove --iterations=100 genkey
+shred --remove --iterations=100 ${KEYGEN_CONFIG_FILE}
 
 GPG_ID=`gpg --list-secret-keys --with-colons 2> /dev/null | grep '^sec:' | cut --delimiter ':' --fields 5`
 if [[ ! -z "${GPG_ID}" ]]; then

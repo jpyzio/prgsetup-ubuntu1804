@@ -12,4 +12,4 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "
 bindkey \"^[[1;3C\" forward-word
 bindkey \"^[[1;3D\" backward-word
-" | tee -a ~/.zshrc
+" | tee --append ~/.zshrc

@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
-set -e
+set -o errexit
+set -o pipefail
+set -o nounset
+# set -o xtrace
 
 INSTALLER_VERSION="18.04"
 
-ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 INSTALLER_DIR="${ROOT_DIR}/installer"
 CONFIG_FILE="${ROOT_DIR}/config.sh"
 
