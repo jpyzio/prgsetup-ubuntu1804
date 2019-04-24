@@ -1,17 +1,27 @@
 # Ubuntu Configurator
 Ubuntu configurator for programming purposes.
 
-# WARNING!!! master branch is not stable yet :(
+### Prerequisites
+```bash
+sudo apt update
+sudo apt install -y git
+```
 
 ### Installing
 Download configurator
-```
-sudo apt update && sudo apt install -y git
-git clone --single-branch --branch ubuntu/18.04 --depth=1 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
+```bash
+git clone --depth=1 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
 ```
 
-Execute installer
+Optional configuration for partly (sic!) non-interactive installation (after installation config file will be safely removed)
+```bash
+cd ~/ubuntu-configurator
+cp config.sh.dist config.sh
+vi config.sh # and set variables
 ```
+
+Execute configurator
+```bash
 bash ~/ubuntu-configurator/install.sh
 ```
 

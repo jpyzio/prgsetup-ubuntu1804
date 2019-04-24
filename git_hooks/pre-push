@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-protected_branch='master'
-current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+PROTECTED_BRANCH='master'
+CURRENT_BRANCH=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
-if [ $protected_branch = $current_branch ]; then
+if [[ ${PROTECTED_BRANCH} = ${CURRENT_BRANCH} ]]; then
     exec < /dev/tty
         while true; do
-            read -p "You're about to commit to master, want some bacon? [y|n]" yn
-            case $yn in
+            read -p "You're about to commit to master, want some bacon? [y|n]" ANSWER
+            case ${ANSWER} in
                 [Yy]* ) exit 0;; # tells git to continue normally
                 [Nn]* ) exit 1;; # tells git to abort operation
             esac
