@@ -15,8 +15,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt update
 sudo apt install --yes yarn
 
-echo "export PATH=\"\$PATH:$(yarn global bin)\"" >> ~/.zshrc
-echo "export PATH=\"\$PATH:$(yarn global bin)\"" >> ~/.bashrc
+echo "export PATH=\"\$PATH:$(yarn global bin)\"" >> ~/.bashrc >> ~/.zshrc
 ### END Yarn
 
 
