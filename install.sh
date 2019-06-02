@@ -37,7 +37,6 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "communication" "Eg. Slack" on \
     "office" "Eg. Libre Office, GIMP" on \
     "security" "Eg. Firewall" on \
-    "php" "7.2 with composer" on \
     "media" "Eg. Spotify, VLC" on \
     "ssh-server" "With secure configuration" off \
     "virtualbox" "If you want install other systems ;)" off \
