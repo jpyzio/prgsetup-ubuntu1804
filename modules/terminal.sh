@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 sudo apt update
 
-sudo apt install --yes xclip
+sudo apt install --yes xclip tmux
 
 
 ### BEGIN zsh
@@ -26,5 +26,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "
 bindkey \"^[[1;3C\" forward-word
 bindkey \"^[[1;3D\" backward-word
+alias sl=\"ls\"
 " | tee --append ~/.zshrc
 ### END Tuning zsh
