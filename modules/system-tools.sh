@@ -4,7 +4,7 @@ sudo apt update
 
 
 ### BEGIN Misc system tools
-sudo apt install --yes sshfs curlftpfs gparted smartmontools
+sudo apt install --yes sshfs curlftpfs gparted smartmontools secure-delete
 ### END Misc system tools
 
 
