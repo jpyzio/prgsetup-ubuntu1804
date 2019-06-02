@@ -20,7 +20,7 @@ source ${MODULES_DIR}/check.sh
 sudo echo -e "\e[32mLet's start the installation ;)\e[39m";
 
 CHOICES=$(whiptail --checklist "Select which services do you want install. " \
-    20 55 15 \
+    30 77 22 \
     "update-system" "Update system" on \
     "system-tools" "System tools" on \
     "diagnostic-tools" "Diagnostic tools" on \
@@ -29,7 +29,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "dev-tools-frontend" "Tools for frontend developers" on \
     "terminal" "Eg. Z Shell and other modifications" on \
     "browsers" "Eg. Chrome, Firefox" on \
-    "gpg" "Keys" off \
+    "gpg" "GNU Privacy Guard Keys" off \
     "git" "with custom hooks and configs" on \
     "ide-editors" "Eg. Sublime Text 3, Atom, Jetbrains Toolbox" on \
     "docker" "With docker-compose" on \
@@ -41,8 +41,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "media" "Eg. Spotify, VLC" on \
     "ssh-server" "With secure configuration" off \
     "virtualbox" "If you want install other systems ;)" off \
-    "documentation" "Generators, converters etc" off
-
+    "documentation" "Generators, converters etc" off \
     3>&2 2>&1 1>&3 )
 
 if [[ -f ${CONFIG_FILE} ]]; then
