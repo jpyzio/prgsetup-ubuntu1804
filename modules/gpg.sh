@@ -46,7 +46,6 @@ if [[ ! -z "${GPG_ID}" ]]; then
     sed -i -E "s/.*export GPGKEY.*\n//g" ~/.bashrc
     sed -i -E "s/.*export GPGKEY.*\n//g" ~/.zshrc
 
-    echo "export GPGKEY=${GPG_ID}" >> ~/.bashrc
-    echo "export GPGKEY=${GPG_ID}" >> ~/.zshrc
+    echo "export GPGKEY=${GPG_ID}" >> ~/.bashrc >> ~/.zshrc
 fi
 ### END GPG configuration
