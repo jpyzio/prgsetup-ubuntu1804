@@ -13,9 +13,15 @@ sudo apt-get update
 sudo apt-get install --yes insomnia
 ### END Insomnia
 
+
 ### BEGIN Postman
 sudo snap install postman
 ### END Postman
+
+
+### BEGIN Databases clients
+sudo apt install --yes mysql-client postgresql-client
+### END Databases clients
 
 
 ### BEGIN Composer global tools
