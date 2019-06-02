@@ -12,7 +12,7 @@ sudo sed -i -E "s/.*Banner.*/Banner \/etc\/issue/g" /etc/ssh/sshd_config
 sudo sed -i -E "s/.*IgnoreRhosts.*/IgnoreRhosts yes/g" /etc/ssh/sshd_config
 sudo sed -i -E "s/.*HostbasedAuthentication.*/HostbasedAuthentication no/g" /etc/ssh/sshd_config
 
-sudo sudo adduser ${user} sudo
+sudo adduser ${user} sudo
 
 sudo service ssh restart
 
