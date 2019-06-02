@@ -20,7 +20,7 @@ sudo snap install postman
 
 
 ### BEGIN Databases clients
-sudo apt install --yes mysql-client postgresql-client
+sudo apt install --yes mysql-client postgresql-client mycli pgcli
 ### END Databases clients
 
 
