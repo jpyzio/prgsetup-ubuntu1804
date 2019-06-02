@@ -41,7 +41,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "media" "Eg. Spotify, VLC" on \
     "ssh-server" "With secure configuration" off \
     "virtualbox" "If you want install other systems ;)" off \
-    "documentation" "Generators, converters etc" off \
+    "documentation" "Generators, converters etc" off
 
     3>&2 2>&1 1>&3 )
 
