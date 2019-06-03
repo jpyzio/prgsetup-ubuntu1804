@@ -3,18 +3,8 @@
 sudo apt update
 
 
-### BEGIN Atom
-ATOM_FILE="${ROOT_DIR}/atom.deb"
-
-wget --output-document=${ATOM_FILE} https://atom.io/download/deb
-sudo gdebi -n ${ATOM_FILE}
-
-rm ${ATOM_FILE}
-### END Atom
-
-
 ### END Sublime Text 3
-sudo snap install sublime-text
+sudo snap install sublime-text --classic
 ### END Sublime Text 3
 
 
