@@ -19,7 +19,7 @@ while [[ -z ${REAL_NAME} ]] ; do
     REAL_NAME=`input "GPG - Real name"`
 done
 
-while [[ -z ${GPG_EMAIL} ]] ; do
+while [[ -z ${EMAIL} ]] ; do
     EMAIL=`input "GPG - Email"`
 done
 
