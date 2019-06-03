@@ -19,12 +19,6 @@ done
 git config --global user.name "${USER_NAME}"
 git config --global user.email "${EMAIL}"
 
-GPG_ID=`gpg --list-secret-keys --with-colons 2> /dev/null | grep '^sec:' | cut --delimiter ':' --fields 5`
-if [[ ! -z "${GPG_ID}" ]]; then
-    git config --global user.signingkey ${GPG_ID}
-    git config --global commit.gpgsign true
-fi
-
 echo -e "npm-debug.log\n.DS_Store\nThumbs.db\n.idea/\n*~\n*.log\n/vendor/\n*.tmp" | tee --append ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ### END Git configuration

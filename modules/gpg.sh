@@ -47,5 +47,10 @@ if [[ ! -z "${GPG_ID}" ]]; then
     sed -i -E "s/.*export GPGKEY.*\n//g" ~/.zshrc
 
     echo "export GPGKEY=${GPG_ID}" >> ~/.bashrc >> ~/.zshrc
+
+    if [[ command -v git > /dev/null ]]; then
+        git config --global user.signingkey ${GPG_ID}
+        git config --global commit.gpgsign true
+    fi
 fi
 ### END GPG configuration
