@@ -8,7 +8,6 @@ CONFIGURATOR_VERSION="18.04"
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MODULES_DIR="${ROOT_DIR}/modules"
-CONFIG_FILE="${ROOT_DIR}/config.local.sh"
 
 input() {
     zenity --entry --title="Ubuntu Configurator" --text="${1}"
@@ -42,21 +41,11 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
     "documentation" "Generators, converters etc" off \
     3>&2 2>&1 1>&3 )
 
-if [[ -f ${CONFIG_FILE} ]]; then
-    source ${CONFIG_FILE}
-fi
-
 source ${MODULES_DIR}/required.sh
 
 for CHOICE in ${CHOICES}; do
     source "${MODULES_DIR}/`echo ${CHOICE} | tr -d '"'`.sh"
 done
-
-if [[ -f ${CONFIG_FILE} ]]; then
-    if zenity --question --text="Do you want safely remove your configuration?"; then
-        shred --remove --iterations=100 ${CONFIG_FILE}
-    fi
-fi
 
 if zenity --question --text="Do you want to reboot your system?"; then
     reboot
