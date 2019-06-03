@@ -12,7 +12,7 @@ sudo apt install --yes zsh gawk
 ### BEGIN OH MY ZSH
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-sudo chsh -s /bin/zsh
+sudo chsh --shell /bin/zsh
 ### END OH MY ZSH
 
 

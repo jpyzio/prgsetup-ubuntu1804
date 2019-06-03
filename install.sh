@@ -44,7 +44,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
 source ${MODULES_DIR}/required.sh
 
 for CHOICE in ${CHOICES}; do
-    source "${MODULES_DIR}/`echo ${CHOICE} | tr -d '"'`.sh"
+    source "${MODULES_DIR}/`echo ${CHOICE} | tr --delete '"'`.sh"
 done
 
 if zenity --question --text="Do you want to reboot your system?"; then

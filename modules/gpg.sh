@@ -43,8 +43,7 @@ shred --remove --iterations=100 ${KEYGEN_CONFIG_FILE}
 
 GPG_ID=`gpg --list-secret-keys --with-colons 2> /dev/null | grep '^sec:' | cut --delimiter ':' --fields 5`
 if [[ ! -z "${GPG_ID}" ]]; then
-    sed -i -E "s/.*export GPGKEY.*\n//g" ~/.bashrc
-    sed -i -E "s/.*export GPGKEY.*\n//g" ~/.zshrc
+    sed --in-place --regexp-extended "s/.*export GPGKEY.*\n//g" ~/.bashrc ~/.zshrc
 
     echo "export GPGKEY=${GPG_ID}" >> ~/.bashrc >> ~/.zshrc
 

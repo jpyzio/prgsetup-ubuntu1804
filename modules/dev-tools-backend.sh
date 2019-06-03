@@ -34,7 +34,7 @@ php-xdebug
 
 
 ### BEGIN Composer
-curl -s https://getcomposer.org/installer | php
+curl --silent https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 ### END Composer
 
