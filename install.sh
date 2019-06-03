@@ -2,7 +2,6 @@
 
 set -o errexit
 set -o pipefail
-set -o nounset
 set -o xtrace
 
 CONFIGURATOR_VERSION="18.04"
