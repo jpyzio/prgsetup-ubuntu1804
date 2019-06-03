@@ -13,5 +13,5 @@ rm ${CHROME_FILE}
 ### END Google Chrome
 
 ### BEGIN Firefox
-sudo apt install firefox firefox-locale-pl
+sudo apt install --yes firefox firefox-locale-pl
 ### END Firefox
