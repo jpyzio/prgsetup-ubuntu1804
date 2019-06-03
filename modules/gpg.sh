@@ -5,7 +5,7 @@ KEYGEN_CONFIG_FILE="${ROOT_DIR}/keygen_config"
 
 ### BEGIN Update and install dependencies
 sudo apt update
-sudo apt install --yes shred
+sudo apt install --yes secure-delete
 ### END Update and install dependencies
 
 
