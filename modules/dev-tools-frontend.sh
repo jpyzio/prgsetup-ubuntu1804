@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt update
-
 
 ### BEGIN Node.js
 curl --silent --location https://deb.nodesource.com/setup_8.x | sudo bash -

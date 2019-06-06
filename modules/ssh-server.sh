@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-sudo apt install --yes openssh-server
 
+### BEGIN Open SSH Server
+sudo apt install --yes openssh-server
+### END Open SSH Server
+
+
+### BEGIN Open SSH Server config
 sudo sed --in-place --regexp-extended "s/.*PermitRootLogin.*/PermitRootLogin no/g" /etc/ssh/sshd_config
 sudo sed --in-place --regexp-extended "s/.*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/g" /etc/ssh/sshd_config
 sudo sed --in-place --regexp-extended "s/.*PubkeyAuthentication.*/PubkeyAuthentication yes/g" /etc/ssh/sshd_config
@@ -14,6 +19,4 @@ sudo sed --in-place --regexp-extended "s/.*IgnoreRhosts.*/IgnoreRhosts yes/g" /e
 sudo sed --in-place --regexp-extended "s/.*HostbasedAuthentication.*/HostbasedAuthentication no/g" /etc/ssh/sshd_config
 
 sudo service ssh restart
-
-
-#Install fail2ban for openssh server
+### END Open SSH Server config

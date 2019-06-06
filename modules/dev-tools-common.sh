@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt update
-
 
 ### BEGIN File transfer apps
 sudo apt install --yes filezilla rsync

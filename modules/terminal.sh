@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
-sudo apt update
-
-sudo apt install --yes xclip tmux
 
 
-### BEGIN zsh
-sudo apt install --yes zsh gawk
-### END zsh
+### BEGIN zsh and tools
+sudo apt install --yes zsh tmux
+### END zsh and tools
 
 
 ### BEGIN OH MY ZSH

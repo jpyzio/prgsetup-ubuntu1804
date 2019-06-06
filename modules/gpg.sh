@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-KEYGEN_CONFIG_FILE="${ROOT_DIR}/keygen_config"
-
 
 ### BEGIN Update and install dependencies
 sudo apt update
@@ -15,6 +13,8 @@ sudo apt install --yes gpa gpg
 
 
 ### BEGIN GPG configuration
+KEYGEN_CONFIG_FILE="${ROOT_DIR}/keygen_config"
+
 while [[ -z ${REAL_NAME} ]] ; do
     REAL_NAME=`input "GPG - Real name"`
 done
@@ -47,7 +47,7 @@ if [[ ! -z "${GPG_ID}" ]]; then
 
     echo "export GPGKEY=${GPG_ID}" >> ~/.bashrc >> ~/.zshrc
 
-    if [[ command -v git > /dev/null ]]; then
+    if [[ $(command -v git) ]]; then
         git config --global user.signingkey ${GPG_ID}
         git config --global commit.gpgsign true
     fi

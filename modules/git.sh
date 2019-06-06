@@ -1,23 +1,21 @@
 #!/usr/bin/env bash
 
-sudo apt update
-
 
 ### BEGIN Git and tools
-sudo apt install --yes git gitk meld tig
+sudo apt install --yes git gitk meld tig gitstats
 ### END Git and tools
 
 
 ### BEGIN Git configuration
-while [[ -z ${USER_NAME} ]] ; do
-    USER_NAME=`input "Git Global - Your name:"`
+while [[ -z ${REAL_NAME} ]] ; do
+    REAL_NAME=`input "Git Global - Your real full name:"`
 done
 
 while [[ -z ${EMAIL} ]] ; do
     EMAIL=`input "Git Global - Your Email:"`
 done
 
-git config --global user.name "${USER_NAME}"
+git config --global user.name "${REAL_NAME}"
 git config --global user.email "${EMAIL}"
 
 echo -e "npm-debug.log\n.DS_Store\nThumbs.db\n.idea/\n*~\n*.log\n/vendor/\n*.tmp" | tee --append ~/.gitignore_global

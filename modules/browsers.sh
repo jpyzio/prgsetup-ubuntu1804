@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt update
-
 
 ### BEGIN Google Chrome
 CHROME_FILE="${ROOT_DIR}/google-chrome.deb"
@@ -15,5 +13,5 @@ rm ${CHROME_FILE}
 
 
 ### BEGIN Firefox
-sudo apt install --yes firefox firefox-locale-pl
+sudo apt install --yes firefox firefox-locale-en firefox-locale-pl
 ### END Firefox

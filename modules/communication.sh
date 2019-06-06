@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt update
-
 
 ### BEGIN Slack
 SLACK_FILE="${ROOT_DIR}/slack.deb"

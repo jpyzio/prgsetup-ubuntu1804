@@ -6,18 +6,15 @@ sudo snap install redis-desktop-manager
 ### END Redis Desktop Manager
 
 
-### BEGIN Insomnia
+### BEGIN REST clients
 wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc | sudo apt-key add -
 echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" | sudo tee /etc/apt/sources.list.d/insomnia.list
 
 sudo apt-get update
 sudo apt-get install --yes insomnia
-### END Insomnia
 
-
-### BEGIN Postman
 sudo snap install postman
-### END Postman
+### END REST clients
 
 
 ### BEGIN Databases clients
@@ -48,3 +45,9 @@ composer global require phploc/phploc
 composer global require phpmd/phpmd
 composer global require squizlabs/php_codesniffer
 ### END Composer global tools
+
+
+### BEGIN Framework installers
+composer global require laravel/installer
+composer global require laravel/lumen-installer
+### END Framework installers

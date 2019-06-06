@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt update
-
 
 ### BEGIN Misc system tools
 sudo apt install --yes sshfs curlftpfs gparted secure-delete

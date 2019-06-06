@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-sudo apt update
 
-sudo apt install --yes  ufw #fail2ban
+### BEGIN Security tools
+sudo apt install --yes  ufw
 
 sudo ufw enable
+### END Security tools

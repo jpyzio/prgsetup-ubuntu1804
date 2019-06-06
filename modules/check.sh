@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+
+### BEGIN Check system
 UBUNTU_VERSION=`lsb_release --release --short`
 
 if [[ "${UBUNTU_VERSION}" != "${CONFIGURATOR_VERSION}" ]] ; then
@@ -13,3 +15,4 @@ for DIR in ~/.ssh ~/.gnupg; do
         read;
     fi
 done
+### END Check system

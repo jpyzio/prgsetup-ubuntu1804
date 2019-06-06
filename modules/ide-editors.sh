@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt update
-
 
 ### END Sublime Text 3
 sudo snap install sublime-text --classic
