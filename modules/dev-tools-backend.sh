@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 ### BEGIN Redis Desktop Manager
 sudo snap install redis-desktop-manager
 ### END Redis Desktop Manager
