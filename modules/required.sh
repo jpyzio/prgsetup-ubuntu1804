@@ -4,4 +4,4 @@ sudo apt update
 
 sudo apt full-upgrade --yes
 
-sudo apt install --yes gdebi curl wget jq zenity rng-tools xclip gawk
+sudo apt install --yes gdebi curl wget jq zenity rng-tools xclip gawk python-software-properties
