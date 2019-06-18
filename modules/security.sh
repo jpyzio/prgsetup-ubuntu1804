@@ -2,7 +2,7 @@
 
 
 ### BEGIN Security tools
-sudo apt install --yes  ufw
+sudo apt install --yes  ufw rkhunter
 
 sudo ufw enable
 ### END Security tools
