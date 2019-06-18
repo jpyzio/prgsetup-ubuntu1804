@@ -2,7 +2,7 @@
 
 
 ### BEGIN Node.js
-curl --silent --location https://deb.nodesource.com/setup_8.x | sudo bash -
+curl --silent --location https://deb.nodesource.com/setup_10.x | sudo --preserve-env bash -
 sudo apt install --yes nodejs
 ### END Node.js
 
