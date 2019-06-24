@@ -16,15 +16,15 @@ sudo apt install --yes gpa gpg
 KEYGEN_CONFIG_FILE="${ROOT_DIR}/keygen_config"
 
 while [[ -z ${REAL_NAME} ]] ; do
-    REAL_NAME=`input "GPG - Real name"`
+    REAL_NAME=`input "Your Real Name"`
 done
 
 while [[ -z ${EMAIL} ]] ; do
-    EMAIL=`input "GPG - Email"`
+    EMAIL=`input "Your Email"`
 done
 
 while [[ -z ${PASSPHRASE} ]] ; do
-    PASSPHRASE=`input "Git Global - Your name"`
+    PASSPHRASE=`input "Your Passphrase for GPG Key"`
 done
 
 echo "Key-Type: 1
