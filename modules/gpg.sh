@@ -23,8 +23,8 @@ while [[ -z ${EMAIL} ]] ; do
     EMAIL=`input "Your Email"`
 done
 
-while [[ -z ${PASSPHRASE} ]] ; do
-    PASSPHRASE=`input "Your Passphrase for GPG Key"`
+while [[ -z ${GPG_PASSPHRASE} ]] ; do
+    GPG_PASSPHRASE=`input "Your Passphrase for GPG Key"`
 done
 
 echo "Key-Type: 1
@@ -34,7 +34,7 @@ Subkey-Length: 4096
 Name-Real: ${REAL_NAME}
 Name-Email: ${EMAIL}
 Expire-Date: 0
-Passphrase: ${PASSPHRASE}
+Passphrase: ${GPG_PASSPHRASE}
 " > ${KEYGEN_CONFIG_FILE}
 
 gpg --gen-key --batch ${KEYGEN_CONFIG_FILE}
