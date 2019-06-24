@@ -15,7 +15,7 @@ sudo chsh --shell /bin/zsh
 
 ### BEGIN FZF for zsh and bash
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --all
 ### END FZF for zsh and bash
 
 
