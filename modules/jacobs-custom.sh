@@ -13,9 +13,13 @@ echo '#/swapfile    swap    swap    defaults    0   0' | sudo tee --append /etc/
 ### END SWAP
 
 
-### BEGIN GUI
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+### BEGIN DOCK
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 50
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
-### END GUI
+gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode ADAPTIVE
+gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items false
+### END DOCK
