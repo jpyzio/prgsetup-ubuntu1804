@@ -11,10 +11,10 @@ if [[ -f ${PRIVATE_KEY_FILE} ]]; then
 else
     mkdir -p ${SSH_DIR}
 
-    while [[ -z ${GIT_PASSPHRASE} ]] ; do
-        GIT_PASSPHRASE=`zenity --password --title="SSH" --text="Enter your RSA key passphrase"`
+    while [[ -z ${SSH_PASSPHRASE} ]] ; do
+        SSH_PASSPHRASE=`zenity --password --title="SSH" --text="Enter your RSA key passphrase"`
     done
-    ssh-keygen -q -t rsa -N "${GIT_PASSPHRASE}" -o -a 100 -b 4096 -f "${PRIVATE_KEY_FILE}"
+    ssh-keygen -q -t rsa -N "${SSH_PASSPHRASE}" -o -a 100 -b 4096 -f "${PRIVATE_KEY_FILE}"
 fi
 
 if [[ -f ${PUBLIC_KEY_FILE} ]]; then
