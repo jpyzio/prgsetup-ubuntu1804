@@ -15,4 +15,7 @@ echo '#/swapfile    swap    swap    defaults    0   0' | sudo tee --append /etc/
 
 ### BEGIN GUI
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
 ### END GUI
