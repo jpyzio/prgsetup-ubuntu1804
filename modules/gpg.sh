@@ -24,7 +24,7 @@ while [[ -z ${EMAIL} ]] ; do
 done
 
 while [[ -z ${GPG_PASSPHRASE} ]] ; do
-    GPG_PASSPHRASE=`input "Your Passphrase for GPG Key"`
+    GPG_PASSPHRASE=`password_input "Your Passphrase for GPG Key"`
 done
 
 echo "Key-Type: 1

@@ -13,6 +13,10 @@ input() {
     zenity --entry --title="Ubuntu Configurator" --text="${1}"
 }
 
+password_input() {
+    zenity --password --title="Ubuntu Configurator" --text="${1}"
+}
+
 source ${MODULES_DIR}/check.sh
 
 sudo echo -e "\e[32mLet's start the installation ;)\e[39m";

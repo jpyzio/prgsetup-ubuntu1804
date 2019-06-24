@@ -12,7 +12,7 @@ else
     mkdir -p ${SSH_DIR}
 
     while [[ -z ${SSH_PASSPHRASE} ]] ; do
-        SSH_PASSPHRASE=`zenity --password --title="SSH" --text="Enter your RSA key passphrase"`
+        SSH_PASSPHRASE=`password_input "Enter your RSA key passphrase"`
     done
     ssh-keygen -q -t rsa -N "${SSH_PASSPHRASE}" -o -a 100 -b 4096 -f "${PRIVATE_KEY_FILE}"
 fi
