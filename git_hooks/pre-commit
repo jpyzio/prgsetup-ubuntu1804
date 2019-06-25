@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# thanks for https://gist.github.com/hrules6872/8077d6799ba53499be361b931059eda2#file-pre-commit
+
 MASTER='refs/heads/master'
 
 if git symbolic-ref HEAD | grep ${MASTER} >/dev/null; then
