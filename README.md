@@ -2,26 +2,18 @@
 Ubuntu configurator for programming purposes.
 
 ### Prerequisites
+**Always read messages ;)**
 ```bash
 sudo apt update
 sudo apt install -y git
 ```
 
+If you have generated .ssh or .gnupg directories, put them in the home directory
+
 ### Installing
-Download configurator
+Download and execute configurator
 ```bash
-git clone --depth=1 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
-```
-
-Optional configuration for partly (sic!) non-interactive installation (after installation config file will be safely removed)
-```bash
-cd ~/ubuntu-configurator
-cp config.sh.dist config.sh
-vi config.sh # and set variables
-```
-
-Execute configurator
-```bash
+git clone --branch ubuntu/18.04 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
 bash ~/ubuntu-configurator/install.sh
 ```
 
@@ -31,22 +23,23 @@ Please read [CONTRIBUTING.md](https://github.com/jpyzio/ubuntu-configurator/blob
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/jpyzio/ubuntu-configurator/tags). 
 
-master - latest LTS
+master - The latest supported Ubuntu version
 
 Branches:
- - ubuntu/18.04
- - ubuntu/20.04 (in the future)
- - ubuntu/22.04 (in the future)
+ - ubuntu/18.04 (stable)
+ - ubuntu/18.04-develop (unstable)
 
 Tags:
  - v1.\*.\* - Ubuntu 18.04 LTS
- - v2.\*.\* - Ubuntu 20.04 LTS (in the future)
- - v3.\*.\* - Ubuntu 22.04 LTS (in the future)
 
 ## Authors
 * **Jakub Pyzio** - *Initial work* - [jpyzio](https://github.com/jpyzio)
 
 See also the list of [contributors](https://github.com/jpyzio/ubuntu-configurator/contributors) who participated in this project.
+
+## Thanks for
+* https://github.com/hrules6872 for git hooks
+* https://github.com/tommarshall for https://github.com/tommarshall/git-good-commit
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/jpyzio/ubuntu-configurator/blob/master/LICENSE.md) file for details
