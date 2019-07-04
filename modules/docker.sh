@@ -18,6 +18,8 @@ sudo systemctl enable docker
 sudo usermod --append --groups docker ${USER}
 
 sudo docker run hello-world
+
+echo -e "\e[31mWARNING!!! Before you use the docker command without \"sudo\", please restart the system!\e[39m"
 ### END Docker
 
 
@@ -26,5 +28,3 @@ sudo curl --location "https://github.com/docker/compose/releases/download/1.23.2
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln --symbolic /usr/local/bin/docker-compose /usr/bin/docker-compose
 ### END Docker Compose
-
-echo -e "\e[31mWARNING!!! Before you use the docker command without \"sudo\", please restart the system!\e[39m"
