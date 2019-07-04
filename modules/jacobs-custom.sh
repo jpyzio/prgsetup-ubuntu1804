@@ -16,3 +16,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items false
 ### BEGIN ALIASES
 echo "alias wanip='curl -s http://whatismyip.akamai.com/'" >> ~/.bashrc >> ~/.zshrc
 ### END ALIASES
+
+### BEGIN PACKAGES
+sudo apt install --yes shellcheck
+### END PACKAGES
