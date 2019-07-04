@@ -11,3 +11,8 @@ gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode ADAPTIVE
 gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items false
 ### END DOCK
+
+
+### BEGIN ALIASES
+echo "alias wanip='curl -s http://whatismyip.akamai.com/'" >> ~/.bashrc >> ~/.zshrc
+### END ALIASES
