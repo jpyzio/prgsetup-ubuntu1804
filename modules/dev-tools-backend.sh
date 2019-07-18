@@ -10,8 +10,8 @@ sudo snap install redis-desktop-manager
 wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc | sudo apt-key add -
 echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" | sudo tee /etc/apt/sources.list.d/insomnia.list
 
-sudo apt-get update
-sudo apt-get install --yes insomnia
+sudo apt update
+sudo apt install --yes insomnia
 
 sudo snap install postman
 ### END REST clients
@@ -38,6 +38,8 @@ sudo mv composer.phar /usr/local/bin/composer
 
 
 ### BEGIN Composer global tools
+echo "export PATH=\"\$HOME/.composer/vendor/bin:\$PATH\"" | tee --append ~/.zshrc ~/.bashrc
+
 composer global require phpunit/phpunit
 composer global require phing/phing
 composer global require sebastian/phpcpd
@@ -48,6 +50,9 @@ composer global require squizlabs/php_codesniffer
 
 
 ### BEGIN Framework installers
+echo "export PATH=\"\$HOME/.symfony/bin:\$PATH\"" | tee --append ~/.zshrc ~/.bashrc
+
+curl -sS https://get.symfony.com/cli/installer | bash
 composer global require laravel/installer
 composer global require laravel/lumen-installer
 ### END Framework installers
