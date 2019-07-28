@@ -2,8 +2,7 @@
 
 
 ### BEGIN Misc system tools
-sudo apt install --yes sshfs curlftpfs gparted secure-delete
-sudo apt install --yes smartmontools --no-install-recommends
+sudo apt install --yes sshfs curlftpfs secure-delete
 ### END Misc system tools
 
 
