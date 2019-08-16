@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-### BEGIN Redis Desktop Manager
-sudo snap install redis-desktop-manager
-### END Redis Desktop Manager
-
 ### BEGIN REST clients
 wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc | sudo apt-key add -
 echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" | sudo tee /etc/apt/sources.list.d/insomnia.list
@@ -15,7 +11,7 @@ sudo snap install postman
 ### END REST clients
 
 ### BEGIN Databases clients
-sudo apt install --yes mysql-client postgresql-client mycli pgcli
+sudo apt install --yes mysql-client postgresql-client mycli pgcli redis-desktop-manager
 ### END Databases clients
 
 ### BEGIN PHP7.2
