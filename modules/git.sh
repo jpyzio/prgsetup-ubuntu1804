@@ -7,12 +7,12 @@ sudo apt install --yes git gitk meld tig gitstats
 
 
 ### BEGIN Git configuration
-while [[ -z ${REAL_NAME} ]] ; do
-    REAL_NAME=`input "Git Global - Your real full name:"`
+while [[ -z ${REAL_NAME} ]]; do
+  REAL_NAME=$(input "Git Global - Your real full name:")
 done
 
-while [[ -z ${EMAIL} ]] ; do
-    EMAIL=`input "Git Global - Your Email:"`
+while [[ -z ${EMAIL} ]]; do
+  EMAIL=$(input "Git Global - Your Email:")
 done
 
 git config --global user.name "${REAL_NAME}"
@@ -28,12 +28,12 @@ HOOKS_DIR="${ROOT_DIR}/git_hooks"
 USER_GIT_TEMPLATES_DIR="${HOME}/.git-templates"
 USER_GIT_HOOKS_DIR="${USER_GIT_TEMPLATES_DIR}/hooks"
 
-git config --global init.templatedir ${USER_GIT_TEMPLATES_DIR}
+git config --global init.templatedir "${USER_GIT_TEMPLATES_DIR}"
 
-mkdir --parents ${USER_GIT_HOOKS_DIR}
+mkdir --parents "${USER_GIT_HOOKS_DIR}"
 
-curl https://cdn.rawgit.com/tommarshall/git-good-commit/v0.6.1/hook.sh > ${USER_GIT_HOOKS_DIR}/commit-msg
-cp ${HOOKS_DIR}/* ${USER_GIT_HOOKS_DIR}/
+curl https://cdn.rawgit.com/tommarshall/git-good-commit/v0.6.1/hook.sh >"${USER_GIT_HOOKS_DIR}"/commit-msg
+cp "${HOOKS_DIR}"/* "${USER_GIT_HOOKS_DIR}"/
 
-chmod +x ${USER_GIT_HOOKS_DIR}/*
+chmod +x "${USER_GIT_HOOKS_DIR}"/*
 ### END Git hooks
