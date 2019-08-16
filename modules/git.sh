@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-
 ### BEGIN Git and tools
 sudo apt install --yes git gitk meld tig gitstats
 ### END Git and tools
-
 
 ### BEGIN Git configuration
 while [[ -z ${REAL_NAME} ]]; do
@@ -21,7 +19,6 @@ git config --global user.email "${EMAIL}"
 echo -e "npm-debug.log\n.DS_Store\nThumbs.db\n.idea/\n*~\n*.log\n/vendor/\n*.tmp" | tee --append ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ### END Git configuration
-
 
 ### BEGIN Git hooks
 HOOKS_DIR="${ROOT_DIR}/git_hooks"
