@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 ### BEGIN Required
 sudo apt update
 sudo apt full-upgrade --yes

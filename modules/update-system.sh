@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 ### BEGIN System update
 sudo apt update
 

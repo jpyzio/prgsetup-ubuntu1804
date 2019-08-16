@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 ### BEGIN Google Chrome
 CHROME_FILE="${ROOT_DIR}/google-chrome.deb"
 
@@ -10,7 +9,6 @@ sudo gdebi --non-interactive "${CHROME_FILE}"
 
 rm "${CHROME_FILE}"
 ### END Google Chrome
-
 
 ### BEGIN Firefox
 sudo apt install --yes firefox firefox-locale-en firefox-locale-pl
