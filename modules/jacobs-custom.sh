@@ -16,5 +16,5 @@ echo "alias wanip='curl -s http://whatismyip.akamai.com/'" >>~/.bashrc >>~/.zshr
 ### END ALIASES
 
 ### BEGIN PACKAGES
-sudo apt install --yes shellcheck
+sudo apt install --yes shellcheck speedtest-cli
 ### END PACKAGES
