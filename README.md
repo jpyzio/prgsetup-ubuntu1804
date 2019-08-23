@@ -4,11 +4,8 @@ Ubuntu configurator for programming purposes.
 ### Prerequisites
 **Always read messages ;)**
 ```bash
-sudo apt update
-sudo apt install -y git
+sudo apt update && sudo apt install --yes git
 ```
-
-If you have generated .ssh or .gnupg directories, put them in the home directory
 
 ### Installing
 Download and execute configurator

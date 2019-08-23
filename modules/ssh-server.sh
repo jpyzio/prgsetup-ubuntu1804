@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-
 ### BEGIN Open SSH Server
 sudo apt install --yes openssh-server
 ### END Open SSH Server
-
 
 ### BEGIN Open SSH Server config
 sudo sed --in-place --regexp-extended "s/.*PermitRootLogin.*/PermitRootLogin no/g" /etc/ssh/sshd_config
