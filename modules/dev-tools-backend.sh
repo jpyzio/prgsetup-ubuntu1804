@@ -12,7 +12,6 @@ sudo snap install postman
 
 ### BEGIN Databases clients
 sudo apt install --yes mysql-client postgresql-client mycli pgcli
-sudo snap install redis-desktop-manager
 ### END Databases clients
 
 ### BEGIN PHP7.2
