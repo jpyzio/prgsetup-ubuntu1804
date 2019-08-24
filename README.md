@@ -1,20 +1,16 @@
-# Ubuntu Configurator
-Ubuntu configurator for programming purposes.
+# Ubuntu 18.04 LTS for programmers
+Ubuntu script provides a ready environment for programmers.
 
 ### Prerequisites
-**Always read messages ;)**
 ```bash
-sudo apt update
-sudo apt install -y git
+sudo apt update && sudo apt install --yes git
 ```
 
-If you have generated .ssh or .gnupg directories, put them in the home directory
-
 ### Installing
-Download and execute configurator
+Download and execute the configurator
 ```bash
-git clone --branch ubuntu/18.04 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
-bash ~/ubuntu-configurator/install.sh
+git clone https://github.com/jpyzio/prgsetup-ubuntu1804.git ~/.prgsetup
+bash ~/.prgsetup/install.sh
 ```
 
 ## Contributing
@@ -23,23 +19,14 @@ Please read [CONTRIBUTING.md](https://github.com/jpyzio/ubuntu-configurator/blob
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/jpyzio/ubuntu-configurator/tags). 
 
-master - The latest supported Ubuntu version
-
-Branches:
- - ubuntu/18.04 (stable)
- - ubuntu/18.04-develop (unstable)
-
-Tags:
- - v1.\*.\* - Ubuntu 18.04 LTS
-
 ## Authors
 * **Jakub Pyzio** - *Initial work* - [jpyzio](https://github.com/jpyzio)
 
 See also the list of [contributors](https://github.com/jpyzio/ubuntu-configurator/contributors) who participated in this project.
 
 ## Thanks for
-* https://github.com/hrules6872 for git hooks
-* https://github.com/tommarshall for https://github.com/tommarshall/git-good-commit
+* https://github.com/hrules6872 for git-hooks
+* https://github.com/tommarshall for git-good-commit
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/jpyzio/ubuntu-configurator/blob/master/LICENSE.md) file for details

@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 ### BEGIN VirtualBox
 wget --quiet https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget --quiet https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -

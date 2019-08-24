@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 ### BEGIN Docker
 sudo apt purge --yes docker docker-engine docker.io containerd runc
 sudo apt install --yes apt-transport-https ca-certificates curl gnupg-agent software-properties-common
@@ -15,16 +14,15 @@ sudo apt install --yes docker-ce docker-ce-cli containerd.io
 echo '{"dns": ["8.8.8.8", "8.8.4.4"]}' | sudo tee /etc/docker/daemon.json
 sudo systemctl enable docker
 
-sudo usermod --append --groups docker ${USER}
+sudo usermod --append --groups docker "${USER}"
 
 sudo docker run hello-world
-### END Docker
 
+echo -e "\e[31mWARNING!!! Before you use the docker command without \"sudo\", please restart the system!\e[39m"
+### END Docker
 
 ### BEGIN Docker Compose
 sudo curl --location "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname --kernel-name)-$(uname --machine)" --output /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln --symbolic /usr/local/bin/docker-compose /usr/bin/docker-compose
 ### END Docker Compose
-
-echo -e "\e[31mWARNING!!! Before you use the docker command without \"sudo\", please restart the system!\e[39m"
