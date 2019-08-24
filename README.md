@@ -1,14 +1,13 @@
 # Ubuntu Configurator
-Ubuntu configurator for programming purposes.
+Ubuntu configurator for web programmers.
 
 ### Prerequisites
-**Always read messages ;)**
 ```bash
 sudo apt update && sudo apt install --yes git
 ```
 
 ### Installing
-Download and execute configurator
+Download and execute the configurator
 ```bash
 git clone --branch ubuntu/18.04 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
 bash ~/ubuntu-configurator/install.sh
@@ -20,7 +19,7 @@ Please read [CONTRIBUTING.md](https://github.com/jpyzio/ubuntu-configurator/blob
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/jpyzio/ubuntu-configurator/tags). 
 
-master - The latest supported Ubuntu version
+master - The latest supported Ubuntu version (stable)
 
 Branches:
  - ubuntu/18.04 (stable)
@@ -35,8 +34,8 @@ Tags:
 See also the list of [contributors](https://github.com/jpyzio/ubuntu-configurator/contributors) who participated in this project.
 
 ## Thanks for
-* https://github.com/hrules6872 for git hooks
-* https://github.com/tommarshall for https://github.com/tommarshall/git-good-commit
+* https://github.com/hrules6872 for git-hooks
+* https://github.com/tommarshall for git-good-commit
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/jpyzio/ubuntu-configurator/blob/master/LICENSE.md) file for details
