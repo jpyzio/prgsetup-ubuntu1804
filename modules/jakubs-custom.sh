@@ -20,7 +20,7 @@ sudo apt install --yes shellcheck speedtest-cli
 ### END Packages
 
 ### BEGIN Enable performance mode
-sudo apt-get install cpufrequtils
+sudo apt install --yes cpufrequtils
 echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils
 sudo systemctl disable ondemand
 ### END Enable performance mode
