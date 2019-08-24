@@ -1,5 +1,5 @@
-# Ubuntu Configurator
-Ubuntu configurator for web programmers.
+# Ubuntu 18.04 LTS for programmers
+Ubuntu script provides a ready environment for programmers.
 
 ### Prerequisites
 ```bash
@@ -9,8 +9,8 @@ sudo apt update && sudo apt install --yes git
 ### Installing
 Download and execute the configurator
 ```bash
-git clone --branch ubuntu/18.04 https://github.com/jpyzio/ubuntu-configurator.git ~/ubuntu-configurator
-bash ~/ubuntu-configurator/install.sh
+git clone https://github.com/jpyzio/prgsetup-ubuntu1804.git ~/.prgsetup
+bash ~/.prgsetup/install.sh
 ```
 
 ## Contributing
@@ -18,15 +18,6 @@ Please read [CONTRIBUTING.md](https://github.com/jpyzio/ubuntu-configurator/blob
 
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/jpyzio/ubuntu-configurator/tags). 
-
-master - The latest supported Ubuntu version (stable)
-
-Branches:
- - ubuntu/18.04 (stable)
- - ubuntu/18.04-develop (unstable)
-
-Tags:
- - v1.\*.\* - Ubuntu 18.04 LTS
 
 ## Authors
 * **Jakub Pyzio** - *Initial work* - [jpyzio](https://github.com/jpyzio)
