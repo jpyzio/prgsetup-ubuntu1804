@@ -45,7 +45,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
   "ssh-server" "With secure configuration" off \
   "virtualbox" "If you want install other systems ;)" off \
   "documentation" "Generators, converters etc" off \
-  "jacobs-custom" "Jacob's customization" off \
+  "jakubs-custom" "Jakub's customization" off \
   3>&2 2>&1 1>&3)
 
 # shellcheck disable=SC1090
