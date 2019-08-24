@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-### BEGIN DOCK
+### BEGIN Dock
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 50
 gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
@@ -9,12 +9,18 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode ADAPTIVE
 gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items false
-### END DOCK
+### END Dock
 
-### BEGIN ALIASES
+### BEGIN Aliases
 echo "alias wanip='curl -s http://whatismyip.akamai.com/'" >>~/.bashrc >>~/.zshrc
-### END ALIASES
+### END Aliases
 
-### BEGIN PACKAGES
+### BEGIN Packages
 sudo apt install --yes shellcheck speedtest-cli
-### END PACKAGES
+### END Packages
+
+### BEGIN Enable performance mode
+sudo apt-get install cpufrequtils
+echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils
+sudo systemctl disable ondemand
+### END Enable performance mode
