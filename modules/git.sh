@@ -16,6 +16,8 @@ done
 git config --global user.name "${REAL_NAME}"
 git config --global user.email "${EMAIL}"
 
+git config --global push.default current
+
 echo -e "npm-debug.log\n.DS_Store\nThumbs.db\n.idea/\n*~\n*.log\n/vendor/\n*.tmp" | tee --append ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ### END Git configuration
