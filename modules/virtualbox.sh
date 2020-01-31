@@ -8,4 +8,6 @@ sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtual
 
 sudo apt update
 sudo apt install --yes virtualbox virtualbox-ext-pack
+
+sudo adduser $USER vboxusers
 ### END VirtualBox
