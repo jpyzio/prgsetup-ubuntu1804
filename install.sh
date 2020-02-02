@@ -40,6 +40,7 @@ CHOICES=$(whiptail --checklist "Select which services do you want install. " \
   "ssh-keygen" "Generate SSH Key" on \
   "communication" "Eg. Slack" on \
   "office" "Eg. Libre Office, GIMP" on \
+  "graphics" "Graphics programs" on \
   "security" "Eg. Firewall" on \
   "media" "Eg. Spotify, VLC" on \
   "ssh-server" "With secure configuration" off \
