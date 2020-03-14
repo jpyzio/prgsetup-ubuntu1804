@@ -22,7 +22,7 @@ echo -e "\e[31mWARNING!!! Before you use the docker command without \"sudo\", pl
 ### END Docker
 
 ### BEGIN Docker Compose
-sudo curl --location "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname --kernel-name)-$(uname --machine)" --output /usr/local/bin/docker-compose
+sudo curl --location "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname --kernel-name)-$(uname --machine)" --output /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln --symbolic /usr/local/bin/docker-compose /usr/bin/docker-compose
 ### END Docker Compose
